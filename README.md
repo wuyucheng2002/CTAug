@@ -2,7 +2,7 @@
 
 ## CTAug Framework
 
-![framework](framework.png)
+
 
 ## Requirements
 
