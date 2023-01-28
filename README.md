@@ -2,7 +2,7 @@
 
 ## CTAug Framework
 
-<img src="framework.png" alt="framework" style="zoom:20%;" />
+<img src="framework.png" alt="framework" style="zoom:10%;" />
 
 
 
