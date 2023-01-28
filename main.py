@@ -74,9 +74,9 @@ def get_parser():
     parser.add_argument("--save_model", type=bool, default=False,
                         help="Whether to save the model.")
     parser.add_argument("--save_embed", type=bool, default=True,
-                        help="Whether to save the model.")
+                        help="Whether to save the embedding.")
     parser.add_argument("--eval_model", type=bool, default=True,
-                        help="Evaluate immediately or save the model.")
+                        help="Whether to evaluate the embedding.")
     parser.add_argument("--norm", type=bool, default=None,
                         help="Whether normalize embedding before logistic regression test.")
 
