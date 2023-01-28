@@ -14,8 +14,9 @@
 
 ## CTAug Framework
 
-<img src="framework.png" width="50%" align=center>
-
+<div align=center>
+<img src="framework.png"  width="50%"/>
+</div>
 
 ## Requirements
 
