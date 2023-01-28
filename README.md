@@ -1,5 +1,7 @@
 # **Cohesive Topology Augmentation for Social Graph Contrastive Learning**
 
+[toc]
+
 ## CTAug Framework
 
 ![framework](framework.png)
@@ -78,7 +80,7 @@
 
 ## Arguments Description
 
-#### get_sub_counts.py
+### get_sub_counts.py
 
 | Name     | Default value  | Description                                                  |
 | -------- | -------------- | ------------------------------------------------------------ |
@@ -88,7 +90,7 @@
 | id_type  | complete_graph | Subgraphs family, can be chosen from {'cycle_graph', 'path_graph', 'complete_graph', 'binomial_tree', 'star_graph', 'nonisomorphic_trees'}. |
 | level    | graph          | The dataset is used for 'graph' classification or 'node' classification. |
 
-#### main.py
+### main.py
 
 | Category                               | Name         | Default value    | Description                                                  |
 | -------------------------------------- | :----------- | ---------------- | ------------------------------------------------------------ |
@@ -117,7 +119,7 @@
 
 NB: If some arguments are set to "**None**", they will be assigned default values which are used in our experiments automatically. The specific assignment can be seen in *main.py*.
 
-#### Methods List
+### Methods List
 
 We can choose different methods by passing value to the "**method**" argument of *main.py*. For different methods, the corresponding "method" argument values are as follows:
 
@@ -168,7 +170,7 @@ NB2: If using module 2, the "feature" arguments must be set to "sub"/"sub_deg" (
 
   - This example use 3/4/5-clique number as node features, and the output dataset will be saved under 'data/' folder, named 'IMDB-BINARY_global_complete_graph_5.pt'. 
 
-#### Hyper-parameter setting
+## Hyper-parameter setting
 
 To replicate our experiment results, we show the "**factor**" and "**core**" argument value we set for each method and each dataset as follows:
 
