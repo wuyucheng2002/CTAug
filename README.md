@@ -191,7 +191,7 @@ NB2: If using module 2, the "**feature**" arguments must be set to "sub"/"sub_de
 
 The values of the "**factor**" and "**core**" parameters we set for each method and dataset are shown below: 
 
-**"factor" argument value for graph classification task:** 
+**"factor" parameter value for graph classification task:** 
 
 | Method        | IMDB-BINARY | IMDB-MULTI | REDDIT-BINARY | ENZYMES | PROTEINS |
 | ------------- | ----------- | ---------- | ------------- | ------- | -------- |
@@ -199,7 +199,7 @@ The values of the "**factor**" and "**core**" parameters we set for each method 
 | CTAug-JOAO    | 0.8         | 0.6        | 0.8           | 0.6     | 0.4      |
 | CTAug-MVGRL   | 0.4         | 0.4        | /             | /       | /        |
 
-**"factor", "core" argument value for node classification task:**
+**"factor", "core" parameter values for node classification task:**
 
 | Method      | Coauthor-Phy | Amazon-Computers |
 | ----------- | ------------ | ---------------- |
