@@ -1,6 +1,6 @@
 # **Cohesive Topology Augmentation for Social Graph Contrastive Learning**
 
-[toc]
+[TOC]
 
 ## CTAug Framework
 
