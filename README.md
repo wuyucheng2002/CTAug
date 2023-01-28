@@ -2,7 +2,7 @@
 
 ## CTAug Framework
 
-![framework](framework.png)
+<img src="framework.png" alt="framework" style="zoom:20%;" />
 
 
 
