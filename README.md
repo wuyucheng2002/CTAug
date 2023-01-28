@@ -18,6 +18,7 @@
 <img src="framework.png"  width="40%"/>
 </div>
 
+
 ## Requirements
 
 - python  3.8
@@ -27,7 +28,7 @@
 - networkx  2.8.4
 - graph-tool (only used for get_sub_counts.py, not necessary for main.py; installation can refer to https://git.skewed.de/count0/graph-tool/-/wikis/installation-instructions)
 
-## File directory
+## File Directory
 
 ```
 .
@@ -135,7 +136,7 @@
 
 NB: If some arguments are set to "**None**", they will be assigned default values which are used in our experiments automatically. The specific assignment can be seen in *main.py*.
 
-### Methods list
+### Methods List
 
 We can choose different methods by passing value to the "**method**" argument of *main.py*. For different methods, the corresponding "method" argument values are as follows:
 
@@ -156,11 +157,11 @@ We can choose different methods by passing value to the "**method**" argument of
 
 NB1: "**AUG**" means use module 1 (Topology Augmentation Enhancement) of *CTAug*, and "**OGSN**" means use module 2 (Graph Learning Enhancement). So if you want to only use one module of *CTAug*, just modify the "method" argument value. E.g. "GraphCL_AUG" for only using module 1 of *CTAug-GraphCL*, and "GraphCL_OGSN" for only using module 2 of *CTAug-GraphCL*.
 
-NB2: If using module 2, the "feature" arguments must be set to "sub"/"sub_deg" (because isomorphic subgraphs counts is necessary to *O-GSN*).
+NB2: If using module 2, the "**feature**" arguments must be set to "sub"/"sub_deg" (because isomorphic subgraphs counts is necessary to *O-GSN*).
 
-## Running examples
+## Running Examples
 
-- **Example 1: Run *CTAug-GraphCL* on *IMDB-BINARY* dataset (set decay factor to 0.8).**
+- **Example 1: Run *CTAug-GraphCL* on *IMDB-BINARY* dataset.**
 
   ```shell
   python main.py --method=GraphCL_AUG_OGSN --dataset=IMDB-BINARY --feature=sub --factor=0.8 --dataset_file=IMDB-BINARY_global_complete_graph_5.pt
@@ -169,7 +170,7 @@ NB2: If using module 2, the "feature" arguments must be set to "sub"/"sub_deg" (
   - The output path is 'log/GraphCL_AUG_OGSN_sub/IMDB-BINARY_0.8.log', means we use *CTAug-GraphCL* method, choose *IMDB-BINARY* dataset, use isomorphic subgraphs counts as node feature, and set probability decay factor \epsilon at 0.8.
   - The log file will record the loss every epoch and the graph properties (including the loose factor) we choose for every batch, calculate the prediction accuracy per 20 epoch (the total training epoch is 100), and get the mean and standard deviation for repeated experiments.
 
-- **Example 2: Run *CTAug-MVGRL* on *IMDB-MULTI* dataset (set factor to 0.4).**
+- **Example 2: Run *CTAug-MVGRL* on *IMDB-MULTI* dataset.**
 
   ```shell
   python main.py --method=MVGRL_AUG_OGSN --dataset=IMDB-MULTI --feature=sub --factor=0.4 --dataset_file=IMDB-MULTI_global_complete_graph_5.pt
@@ -186,9 +187,9 @@ NB2: If using module 2, the "feature" arguments must be set to "sub"/"sub_deg" (
 
   - This example use 3/4/5-clique number as node features, and the output dataset will be saved under 'data/' folder, named 'IMDB-BINARY_global_complete_graph_5.pt'. 
 
-## Hyper-parameter setting
+## Parameter Setting
 
-To replicate our experiment results, we show the "**factor**" and "**core**" argument value we set for each method and each dataset as follows:
+The values of the "**factor**" and "**core**" parameters we set for each method and dataset are shown below: 
 
 **"factor" argument value for graph classification task:** 
 
