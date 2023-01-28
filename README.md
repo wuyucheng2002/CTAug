@@ -3,13 +3,13 @@
 - [**Cohesive Topology Augmentation for Social Graph Contrastive Learning**](#cohesive-topology-augmentation-for-social-graph-contrastive-learning)
   - [CTAug Framework](#ctaug-framework)
   - [Requirements](#requirements)
-  - [File directory](#file-directory)
+  - [File Directory](#file-directory)
   - [Arguments Description](#arguments-description)
     - [get\_sub\_counts.py](#get_sub_countspy)
     - [main.py](#mainpy)
-    - [Methods list](#methods-list)
-  - [Running examples](#running-examples)
-  - [Hyper-parameter setting](#hyper-parameter-setting)
+    - [Methods List](#methods-list)
+  - [Running Examples](#running-examples)
+  - [Parameter Setting](#parameter-setting)
 
 
 ## CTAug Framework
@@ -167,7 +167,7 @@ NB2: If using module 2, the "**feature**" arguments must be set to "sub"/"sub_de
   python main.py --method=GraphCL_AUG_OGSN --dataset=IMDB-BINARY --feature=sub --factor=0.8 --dataset_file=IMDB-BINARY_global_complete_graph_5.pt
   ```
 
-  - The output path is 'log/GraphCL_AUG_OGSN_sub/IMDB-BINARY_0.8.log', means we use *CTAug-GraphCL* method, choose *IMDB-BINARY* dataset, use isomorphic subgraphs counts as node feature, and set probability decay factor \epsilon at 0.8.
+  - The output path is 'log/GraphCL_AUG_OGSN_sub/IMDB-BINARY_0.8.log', means we use *CTAug-GraphCL* method, choose *IMDB-BINARY* dataset, use isomorphic subgraphs counts as node feature, and set probability decay factor $\epsilon$ at 0.8.
   - The log file will record the loss every epoch and the graph properties (including the loose factor) we choose for every batch, calculate the prediction accuracy per 20 epoch (the total training epoch is 100), and get the mean and standard deviation for repeated experiments.
 
 - **Example 2: Run *CTAug-MVGRL* on *IMDB-MULTI* dataset.**
@@ -176,7 +176,7 @@ NB2: If using module 2, the "**feature**" arguments must be set to "sub"/"sub_de
   python main.py --method=MVGRL_AUG_OGSN --dataset=IMDB-MULTI --feature=sub --factor=0.4 --dataset_file=IMDB-MULTI_global_complete_graph_5.pt
   ```
 
-  - The output path is 'log/MVGRL_AUG_OGSN_sub/IMDB-MULTI_0.4.log', means we use *CTAug-MVGRL* method, choose *IMDB-MULTI* dataset, use isomorphic subgraphs counts as node feature, and set factor \eta at 0.4.
+  - The output path is 'log/MVGRL_AUG_OGSN_sub/IMDB-MULTI_0.4.log', means we use *CTAug-MVGRL* method, choose *IMDB-MULTI* dataset, use isomorphic subgraphs counts as node feature, and set factor $\eta$ at 0.4.
   - The log file will record the loss of every epoch, calculate the prediction accuracy per 10 epoch (the total training epoch is 50), and get the mean and standard deviation for repeated experiments. 
 
 - **Example 3: Get isomorphic subgraphs counts of *IMDB-BINARY* dataset.**
