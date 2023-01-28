@@ -120,7 +120,7 @@
 | Basic setting                          | save_path    | None             | The name of the folder to save log. The default path is a subfolder named as method name under the folder 'log'. |
 | Basic setting                          | device       | None             | Running environment, 'cpu' or 'cuda'.                        |
 | Dataset preprocessing and augmentation | pn           | 0.2              | The probability of dropping node, removing edge, or sampling subgraph. |
-| Dataset preprocessing and augmentation | factor       | 0.8              | The decay factor of dropping probability in CTAug-Pro, or the factor considering cohesive property in CTAug-DT. |
+| Dataset preprocessing and augmentation | factor       | 0.8              | The decay factor of dropping probability in CTAug for probabilistic GCL methods, or the factor considering cohesive property in CTAug for deterministic GCL methods. |
 | Dataset preprocessing and augmentation | cal_weight   | node             | Choose the edge weight calculation strategy from {'node', 'edge'}. Only used in CTAug-MVGRL method. |
 | Dataset preprocessing and augmentation | core         | kcore            | Subgraph property, can be chosen from {'kcore', 'ktruss'}. Only used in CTAug-GRACE and CTAug-GCA methods. |
 | Model training                         | epoch        | None             | Training epoch.                                              |

@@ -47,8 +47,8 @@ def get_parser():
     parser.add_argument("--pn", type=float, default=0.2,
                         help="The probability of dropping node, removing edge, or sampling subgraph.")
     parser.add_argument("--factor", type=float, default=0.8,
-                        help="The decay factor of dropping probability in CTAug-Pro, "
-                             "or the factor considering cohesive property in CTAug-DT.")
+                        help="The decay factor of dropping probability in CTAug for probabilistic GCL methods, "
+                             "or the factor considering cohesive property in CTAug for deterministic GCL methods.")
     parser.add_argument("--cal_weight", type=str, default='node',
                         help="Choose the edge weight calculation strategy from {'node', 'edge'}."
                              "Only used in CTAug-MVGRL method.")
