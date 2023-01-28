@@ -129,10 +129,10 @@
 | Model training                         | shuffle      | True             | Shuffle the graphs in the dataset or not.                    |
 | Model training                         | hid_units    | 128              | Dimension of hidden layers and embedding.                    |
 | Model training                         | num_layer    | 2                | Number of GConv layers.                                      |
-| Model Saving and evaluation            | save_model   | False            | Whether to save the model.                                   |
-| Model Saving and evaluation            | save_embed   | True             | Whether to save the embedding.                               |
-| Model Saving and evaluation            | eval_model   | True             | Whether to evaluate the embedding.                           |
-| Model Saving and evaluation            | norm         | None             | Whether normalize embedding before logistic regression test. |
+| Model Saving and evaluation            | save_model   | False            | Whether to save the model or not.                            |
+| Model Saving and evaluation            | save_embed   | True             | Whether to save the embedding or not.                        |
+| Model Saving and evaluation            | eval_model   | True             | Whether to evaluate the embedding or not.                    |
+| Model Saving and evaluation            | norm         | None             | Whether to normalize embedding before logistic regression test or not. |
 
 NB: If some arguments are set to "**None**", they will be assigned default values which are used in our experiments automatically. The specific assignment can be seen in *main.py*.
 
