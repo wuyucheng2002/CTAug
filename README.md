@@ -172,20 +172,20 @@ NB2: If using module 2, the "feature" arguments must be set to "sub"/"sub_deg" (
 
 To replicate our experiment results, we show the "**factor**" and "**core**" argument value we set for each method and each dataset as follows:
 
-**Graph classification:**
+**"factor" argument for graph classification task:** 
 
-| "factor"      | IMDB-BINARY | IMDB-MULTI | REDDIT-BINARY | ENZYMES | PROTEINS |
+| Method        | IMDB-BINARY | IMDB-MULTI | REDDIT-BINARY | ENZYMES | PROTEINS |
 | ------------- | ----------- | ---------- | ------------- | ------- | -------- |
 | CTAug-GraphCL | 0.8         | 0.2        | 0.8           | 0.8     | 0        |
 | CTAug-JOAO    | 0.8         | 0.6        | 0.8           | 0.6     | 0.4      |
 | CTAug-MVGRL   | 0.4         | 0.4        | /             | /       | /        |
 
-**Node classification:**
+**"factor", "core" arguments for node classification task:**
 
-| "factor", "core" | Coauthor-Phy | Amazon-Computers |
-| ---------------- | ------------ | ---------------- |
-| CTAug-GRACE      | 0, ktruss    | 0, ktruss        |
-| CTAug-GCA        | 0, ktruss    | 0, kcore         |
+| Method      | Coauthor-Phy | Amazon-Computers |
+| ----------- | ------------ | ---------------- |
+| CTAug-GRACE | 0, ktruss    | 0, ktruss        |
+| CTAug-GCA   | 0, ktruss    | 0, kcore         |
 
 
 
