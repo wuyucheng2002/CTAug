@@ -1,6 +1,16 @@
 # **Cohesive Topology Augmentation for Social Graph Contrastive Learning**
 
-[TOC]
+- [**Cohesive Topology Augmentation for Social Graph Contrastive Learning**](#cohesive-topology-augmentation-for-social-graph-contrastive-learning)
+  - [CTAug Framework](#ctaug-framework)
+  - [Requirements](#requirements)
+  - [File directory](#file-directory)
+  - [Arguments Description](#arguments-description)
+    - [get\_sub\_counts.py](#get_sub_countspy)
+    - [main.py](#mainpy)
+    - [Methods list](#methods-list)
+  - [Running examples](#running-examples)
+  - [Hyper-parameter setting](#hyper-parameter-setting)
+
 
 ## CTAug Framework
 
@@ -70,11 +80,17 @@
 ```
 
 - **get_sub_counts.py** is used to count the isomorphic subgraphs, the output results will be saved under 'data/' folder. This code mainly refers to https://github.com/gbouritsas/GSN.
+
 - **main.py** is the running interface of *CTAug*, we can use different methods and settings by passing arguments.
+
 - **CTAug** package implements our *CTAug* method and some baseline methods used in our experiment.
   - **methods** includes 1) **Graph** classification baseline methods: _GraphCL_, _InfoGraph_, _JOAO_, and *JOAOv2* implemented by PyGCL(https://github.com/PyGCL/PyGCL); *MVGRL* refers to https://github.com/kavehhassani/mvgrl. 2) Cohesive topology augmentation GCL methods: *CTAug-GraphCL*, *CTAug-JOAO*, *CTAug-MVGRL*. 3) **Node** classification baseline methods: *GRACE* and *GCA*, which are borrowed from https://github.com/CRIPAC-DIG/GCA, and 4) corresponding cohesive topology augmentation GCL method: *CTAug-GRACE* and *CTAug-GCA*.
   - **evaluate.py**, **model.py**, **preprocess.py** and **utils.py** store a series of functions and classes used for evaluating graph embedding, building contrastive learning model, preprocessing datasets, extracting cohesive subgraph, etc.
-- **data** folder stores raw and processed data files, including graph classification datasets (*IMDB-BINARY*, *IMDB-MULTI*, *ENZYMES*, and *PROTEINS*), and corresponding substructure counts datasets (*IMDB-BINARY_global_complete_graph_5.pt*, *IMDB-MULTI_global_complete_graph_5.pt*, *ENZYMES_global_cycle_graph_5.pt*, and *PROTEINS_global_cycle_graph_5.pt*). PS: Due to file size limitations we don't upload *REDDIT-BINARY*, *Coauther Physics* and *Amazon Computers* dataset and their corresponding substructure counts datasets, but these datasets can be easily obtained by *get_sub_counts.py*.
+  
+- **data** folder stores raw and processed data files, including graph classification datasets (*IMDB-BINARY*, *IMDB-MULTI*, *ENZYMES*, and *PROTEINS*), and corresponding substructure counts datasets (*IMDB-BINARY_global_complete_graph_5.pt*, *IMDB-MULTI_global_complete_graph_5.pt*, *ENZYMES_global_cycle_graph_5.pt*, and *PROTEINS_global_cycle_graph_5.pt*). 
+
+  PS: Due to file size limitations we don't upload *REDDIT-BINARY*, *Coauther Physics* and *Amazon Computers* dataset and their corresponding substructure counts datasets, but these datasets can be easily obtained by *get_sub_counts.py*.
+
 - **log** folder records experiment output, e.g., loss of each epoch, and mean and standard deviation of accuracies. When running *main.py*, it will create a subfolder in the log folder automatically, generate a log file and save the embedding.
   - 'GraphCL_AUG_OGSN_sub/IMDB-BINARY_0.8.log' is an output example. It is a log record for *CTAug-GraphCL* method, which use *IMDB-BINARY* dataset, use isomorphic subgraphs counts as node feature, and set probability decay factor at 0.8.
 
@@ -119,7 +135,7 @@
 
 NB: If some arguments are set to "**None**", they will be assigned default values which are used in our experiments automatically. The specific assignment can be seen in *main.py*.
 
-### Methods List
+### Methods list
 
 We can choose different methods by passing value to the "**method**" argument of *main.py*. For different methods, the corresponding "method" argument values are as follows:
 
@@ -138,7 +154,7 @@ We can choose different methods by passing value to the "**method**" argument of
 | node classification  | baseline | GRACE         | GRACE                   |
 | node classification  | baseline | GCA           | GCA                     |
 
-NB1: "**AUG**" means use module 1 (Topology Augmentation Enhancement) of *CTAug*, and "**OGSN**" means use module 2 (Graph Learning Enhancement). So if you want to only use one module of *CTAug*, just modify the "method" argument value. E.g. "GraphCL_AUG" for only using module 1 of CTAug-GraphCL, and "GraphCL_OGSN" for only using module 2 of CTAug-GraphCL.
+NB1: "**AUG**" means use module 1 (Topology Augmentation Enhancement) of *CTAug*, and "**OGSN**" means use module 2 (Graph Learning Enhancement). So if you want to only use one module of *CTAug*, just modify the "method" argument value. E.g. "GraphCL_AUG" for only using module 1 of *CTAug-GraphCL*, and "GraphCL_OGSN" for only using module 2 of *CTAug-GraphCL*.
 
 NB2: If using module 2, the "feature" arguments must be set to "sub"/"sub_deg" (because isomorphic subgraphs counts is necessary to *O-GSN*).
 
@@ -174,7 +190,7 @@ NB2: If using module 2, the "feature" arguments must be set to "sub"/"sub_deg" (
 
 To replicate our experiment results, we show the "**factor**" and "**core**" argument value we set for each method and each dataset as follows:
 
-**"factor" argument for graph classification task:** 
+**"factor" argument value for graph classification task:** 
 
 | Method        | IMDB-BINARY | IMDB-MULTI | REDDIT-BINARY | ENZYMES | PROTEINS |
 | ------------- | ----------- | ---------- | ------------- | ------- | -------- |
@@ -182,7 +198,7 @@ To replicate our experiment results, we show the "**factor**" and "**core**" arg
 | CTAug-JOAO    | 0.8         | 0.6        | 0.8           | 0.6     | 0.4      |
 | CTAug-MVGRL   | 0.4         | 0.4        | /             | /       | /        |
 
-**"factor", "core" arguments for node classification task:**
+**"factor", "core" argument value for node classification task:**
 
 | Method      | Coauthor-Phy | Amazon-Computers |
 | ----------- | ------------ | ---------------- |
