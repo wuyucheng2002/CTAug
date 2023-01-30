@@ -37,7 +37,10 @@ def subgraph_counts2ids(count_fn, data, subgraph_dicts, subgraph_params):
     else:
         edge_index = remove_self_loops(data.edge_index)[0]
 
-    num_nodes = data.x.shape[0]
+    if data.x is None:
+        num_nodes = data.edge_index.max().item() + 1
+    else:
+        num_nodes = data.x.shape[0]
     identifiers = None
     logger.info("num of subgraph_dicts: {}".format(len(subgraph_dicts)))
     for i, subgraph_dict in enumerate(subgraph_dicts):

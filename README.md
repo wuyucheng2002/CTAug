@@ -32,68 +32,68 @@
 
 ```
 .
-│  framework.png
-│  get_sub_counts.py
-│  main.py
-│  README.md
+├─ framework.png
+├─ get_sub_counts.py
+├─ main.py
+├─ README.md
 │
-├─CTAug
-│  │  evaluate.py
-│  │  model.py
-│  │  preprocess.py
-│  │  utils.py
-│  │  __init__.py
+├─ CTAug
+│  ├─ evaluate.py
+│  ├─ model.py
+│  ├─ preprocess.py
+│  ├─ utils.py
+│  ├─ __init__.py
 │  │
-│  └─methods
-│     │  GraphCL.py
-│     │  GraphCL_AUG.py
-│     │  InfoGraph.py
-│     │  JOAO.py
-│     │  JOAOv2.py
-│     │  JOAO_AUG.py
-│     │  MVGRL.py
-│     │  MVGRL_AUG.py
-│     │  __init__.py
+│  └─ methods
+│     ├─ GraphCL.py
+│     ├─ GraphCL_AUG.py
+│     ├─ InfoGraph.py
+│     ├─ JOAO.py
+│     ├─ JOAOv2.py
+│     ├─ JOAO_AUG.py
+│     ├─ MVGRL.py
+│     ├─ MVGRL_AUG.py
+│     ├─ __init__.py
 │     │
-│     └─node_cls
-│        │  CTAug_node.py
-│        │  utils_ctaug.py
-│        │  utils_sp.py
-│        │  __init__.py
-│        │
-│        ├─param
-│        └─pGRACE
+│     └─ node_cls
+│        ├─ CTAug_node.py
+│        ├─ utils_ctaug.py
+│        ├─ utils_sp.py
+│        ├─ __init__.py
+│        ├─ param
+│        └─ pGRACE
 │   
-├─data
-│  │  ENZYMES_global_cycle_graph_5.pt
-│  │  IMDB-BINARY_global_complete_graph_5.pt
-│  │  IMDB-MULTI_global_complete_graph_5.pt
-│  │  PROTEINS_global_cycle_graph_5.pt
-│  │
-│  ├─ENZYMES
-│  ├─IMDB-BINARY
-│  ├─IMDB-MULTI
-│  └─PROTEINS
+├─ data
+│  ├─ ENZYMES_global_cycle_graph_5.pt
+│  ├─ IMDB-BINARY_global_complete_graph_5.pt
+│  ├─ IMDB-MULTI_global_complete_graph_5.pt
+│  ├─ PROTEINS_global_cycle_graph_5.pt
+│  ├─ ENZYMES
+│  ├─ IMDB-BINARY
+│  ├─ IMDB-MULTI
+│  └─ PROTEINS
 │
-└─log
-    └─GraphCL_AUG_OGSN_sub
-            IMDB-BINARY_0.8.log
+└─ log
+    └─ GraphCL_AUG_OGSN_sub
+         └─ IMDB-BINARY_0.8.log
 ```
 
-- **get_sub_counts.py** is used to count the isomorphic subgraphs, the output results will be saved under 'data/' folder. This code mainly refers to https://github.com/gbouritsas/GSN.
+- `get_sub_counts.py` is used to count the isomorphic subgraphs, the output results will be saved under `data` folder. This code mainly refers to https://github.com/gbouritsas/GSN.
 
-- **main.py** is the running interface of *CTAug*, we can use different methods and settings by passing arguments.
+- `main.py` is the running interface of *CTAug*, we can use different methods and settings by passing arguments.
 
-- **CTAug** package implements our *CTAug* method and some baseline methods used in our experiment.
-  - **methods** includes (1) **Graph** classification baseline methods: _GraphCL_, _InfoGraph_, _JOAO_, and *JOAOv2* implemented by PyGCL(https://github.com/PyGCL/PyGCL); *MVGRL* refers to https://github.com/kavehhassani/mvgrl. (2) Cohesive topology augmentation GCL methods: *CTAug-GraphCL*, *CTAug-JOAO*, *CTAug-MVGRL*. (3) **Node** classification baseline methods: *GRACE* and *GCA*, which are borrowed from https://github.com/CRIPAC-DIG/GCA, and (4) corresponding cohesive topology augmentation GCL method: *CTAug-GRACE* and *CTAug-GCA*.
-  - **evaluate.py**, **model.py**, **preprocess.py** and **utils.py** store a series of functions and classes used for evaluating graph embedding, building contrastive learning model, preprocessing datasets, extracting cohesive subgraph, etc.
+- `CTAug` package implements our *CTAug* method and some baseline methods used in our experiment.
   
-- **data** folder stores raw and processed data files, including graph classification datasets (*IMDB-BINARY*, *IMDB-MULTI*, *ENZYMES*, and *PROTEINS*), and corresponding substructure counts datasets (*IMDB-BINARY_global_complete_graph_5.pt*, *IMDB-MULTI_global_complete_graph_5.pt*, *ENZYMES_global_cycle_graph_5.pt*, and *PROTEINS_global_cycle_graph_5.pt*). 
+  - `methods` includes (1) **Graph** classification baseline methods: _GraphCL_, _InfoGraph_, _JOAO_, and *JOAOv2* implemented by PyGCL(https://github.com/PyGCL/PyGCL); *MVGRL* refers to https://github.com/kavehhassani/mvgrl. (2) Cohesive topology augmentation GCL methods: *CTAug-GraphCL*, *CTAug-JOAO*, *CTAug-MVGRL*. (3) **Node** classification baseline methods: *GRACE* and *GCA*, which are borrowed from https://github.com/CRIPAC-DIG/GCA, and (4) corresponding cohesive topology augmentation GCL method: *CTAug-GRACE* and *CTAug-GCA*.
+  - `evaluate.py`, `model.py`, `preprocess.py` and `utils.py` store a series of functions and classes used for evaluating graph embedding, building contrastive learning model, preprocessing datasets, extracting cohesive subgraph, etc.
+  
+- `data` folder stores raw and processed data files, including graph classification datasets (`IMDB-BINARY`, `IMDB-MULTI`, `ENZYMES`, and `PROTEINS`), and corresponding substructure counts datasets (`IMDB-BINARY_global_complete_graph_5.pt`, `IMDB-MULTI_global_complete_graph_5.pt`, `ENZYMES_global_cycle_graph_5.pt`, and `PROTEINS_global_cycle_graph_5.pt`). 
 
-  NB: Due to file size limitations we don't upload *REDDIT-BINARY*, *Coauther Physics* and *Amazon Computers* dataset and their corresponding substructure counts datasets, but these datasets can be obtained by *get_sub_counts.py* easily.
+  NB: Due to file size limitations we don't upload `REDDIT-BINARY`, `Coauther Physics`,  `Amazon Computers` datasets and their corresponding substructure counts datasets, but these datasets can be obtained by `get_sub_counts.py` easily.
 
-- **log** folder records experiment output, e.g., loss of each epoch, and mean and standard deviation of accuracies. When running *main.py*, it will create a subfolder in the log folder automatically, generate a log file and save the embedding.
-  - 'GraphCL_AUG_OGSN_sub/IMDB-BINARY_0.8.log' is an output example. It is a log record for *CTAug-GraphCL* method, which use *IMDB-BINARY* dataset, use isomorphic subgraphs counts as node feature, and set probability decay factor at 0.8.
+- `log` folder records experiment output, e.g., loss of each epoch, and mean and standard deviation of accuracies. When running `main.py`, it will create a subfolder in the log folder automatically, generate a log file and save the embedding.
+  
+  - `GraphCL_AUG_OGSN_sub/IMDB-BINARY_0.8.log` is an output example. It is a log record for *CTAug-GraphCL* method, which use *IMDB-BINARY* dataset, use isomorphic subgraphs counts as node feature, and set probability decay factor at 0.8.
 
 ## Arguments Description
 
@@ -134,7 +134,7 @@
 | eval_model   | True             | Whether to evaluate the embedding or not.                    |
 | norm         | None             | Whether to normalize embedding before logistic regression test or not. |
 
-NB: If some arguments are set to "**None**", they will be assigned default values which are used in our experiments automatically. The specific assignment can be seen in *main.py*.
+NB: If some arguments are set to "**None**", they will be assigned default values which are used in our experiments automatically. The specific assignment can be seen in `main.py`.
 
 ### Methods List
 
@@ -155,9 +155,9 @@ We can choose different methods by passing value to the "**method**" argument of
 | node classification  | baseline | GRACE         | GRACE                   |
 | node classification  | baseline | GCA           | GCA                     |
 
-NB1: "**AUG**" means use module 1 (Topology Augmentation Enhancement) of *CTAug*, and "**OGSN**" means use module 2 (Graph Learning Enhancement). So if you want to only use one module of *CTAug*, just modify the "method" argument value. E.g. "GraphCL_AUG" for only using module 1 of *CTAug-GraphCL*, and "GraphCL_OGSN" for only using module 2 of *CTAug-GraphCL*.
+NB1: "**AUG**" means use module 1 (Topology Augmentation Enhancement) of *CTAug*, and "**OGSN**" means use module 2 (Graph Learning Enhancement). So if you want to only use one module of *CTAug*, just modify the "**method**" argument value. E.g. "GraphCL_AUG" for only using module 1 of *CTAug-GraphCL*, and "GraphCL_OGSN" for only using module 2 of *CTAug-GraphCL*.
 
-NB2: If using module 2, the "**feature**" arguments must be set to "sub"/"sub_deg" (because isomorphic subgraphs counts is necessary to *O-GSN*).
+NB2: If using module 2, the "**feature**" arguments must be set to "**sub**"/"**sub_deg**" (because isomorphic subgraphs counts is necessary to *O-GSN*).
 
 ## Running Examples
 
@@ -167,7 +167,7 @@ NB2: If using module 2, the "**feature**" arguments must be set to "sub"/"sub_de
   python main.py --method=GraphCL_AUG_OGSN --dataset=IMDB-BINARY --feature=sub --factor=0.8 --dataset_file=IMDB-BINARY_global_complete_graph_5.pt
   ```
 
-  - The output path is 'log/GraphCL_AUG_OGSN_sub/IMDB-BINARY_0.8.log', means we use *CTAug-GraphCL* method, choose *IMDB-BINARY* dataset, use isomorphic subgraphs counts as node feature, and set probability decay factor $\epsilon$ at 0.8.
+  - The output file is `log/GraphCL_AUG_OGSN_sub/IMDB-BINARY_0.8.log`, means we use *CTAug-GraphCL* method, choose *IMDB-BINARY* dataset, use isomorphic subgraphs counts as node feature, and set probability decay factor $\epsilon$ at 0.8.
   - The log file will record the loss every epoch and the graph properties we choose for every batch, calculate the prediction accuracy per 20 epoch (the total training epoch is 100), and get the mean and standard deviation for repeated experiments.
 
 - **Example 2: Run *CTAug-MVGRL* on *IMDB-MULTI* dataset.**
@@ -176,7 +176,7 @@ NB2: If using module 2, the "**feature**" arguments must be set to "sub"/"sub_de
   python main.py --method=MVGRL_AUG_OGSN --dataset=IMDB-MULTI --feature=sub --factor=0.4 --dataset_file=IMDB-MULTI_global_complete_graph_5.pt
   ```
 
-  - The output path is 'log/MVGRL_AUG_OGSN_sub/IMDB-MULTI_0.4.log', means we use *CTAug-MVGRL* method, choose *IMDB-MULTI* dataset, use isomorphic subgraphs counts as node feature, and set factor $\eta$ at 0.4.
+  - The output file is `log/MVGRL_AUG_OGSN_sub/IMDB-MULTI_0.4.log`, means we use *CTAug-MVGRL* method, choose *IMDB-MULTI* dataset, use isomorphic subgraphs counts as node feature, and set factor $\eta$ at 0.4.
   - The log file will record the loss of every epoch, calculate the prediction accuracy per 10 epoch (the total training epoch is 50), and get the mean and standard deviation for repeated experiments. 
 
 - **Example 3: Get isomorphic subgraphs counts of *IMDB-BINARY* dataset.**
@@ -185,7 +185,7 @@ NB2: If using module 2, the "**feature**" arguments must be set to "sub"/"sub_de
   python get_sub_counts.py --dataset=IMDB-BINARY --k=5 --id_scope=global --id_type=complete_graph --level=graph
   ```
 
-  - This example use 3/4/5-clique number as node features, and the output dataset will be saved under 'data/' folder, named 'IMDB-BINARY_global_complete_graph_5.pt'. 
+  - This example use 3/4/5-clique numbers as node features, and the output dataset will be saved under `data` folder, named `IMDB-BINARY_global_complete_graph_5.pt`. 
 
 ## Parameter Setting
 
