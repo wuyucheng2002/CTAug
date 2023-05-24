@@ -9,7 +9,6 @@
     - [main.py](#mainpy)
     - [Methods List](#methods-list)
   - [Running Examples](#running-examples)
-  - [Parameter Setting](#parameter-setting)
 
 
 ## CTAug Framework
