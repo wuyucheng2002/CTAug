@@ -156,7 +156,7 @@ We can choose different methods by passing value to the "**method**" argument of
 
 NB1: "**AUG**" means use module 1 (Topology Augmentation Enhancement) of *CTAug*, and "**OGSN**" means use module 2 (Graph Learning Enhancement). So if you want to only use one module of *CTAug*, just modify the "**method**" argument value. E.g. "GraphCL_AUG" for only using module 1 of *CTAug-GraphCL*, and "GraphCL_OGSN" for only using module 2 of *CTAug-GraphCL*.
 
-NB2: If using module 2, the "**feature**" arguments must be set to "**sub**"/"**sub_deg**" (because isomorphic subgraphs counts is necessary to *O-GSN*).
+NB2: If using module 2, the "**feature**" arguments must be set to "**sub**" (because isomorphic subgraphs counts is necessary to *O-GSN*).
 
 ## Running Examples
 
