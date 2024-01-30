@@ -1,6 +1,6 @@
-# **Cohesive Topology Augmentation for Social Graph Contrastive Learning**
+# **Graph Contrastive Learning with Cohesive Subgraph Awareness**
 
-- [**Cohesive Topology Augmentation for Social Graph Contrastive Learning**](#cohesive-topology-augmentation-for-social-graph-contrastive-learning)
+- [**Graph Contrastive Learning with Cohesive Subgraph Awareness**](#cohesive-topology-augmentation-for-social-graph-contrastive-learning)
   - [CTAug Framework](#ctaug-framework)
   - [Requirements](#requirements)
   - [File Directory](#file-directory)
