@@ -14,7 +14,7 @@
 ## CTAug Framework
 
 <div align=center>
-<img src="framework.jpg"  width="60%"/>
+<img src="frameworkv9.jpg"  width="60%"/>
 </div>
 
 
