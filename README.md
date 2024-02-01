@@ -5,7 +5,7 @@ Congratulations on having our research full paper accepted to The Web Conference
 arXiv: http://arxiv.org/abs/2401.17580
 
 
-## Catalog of this code repo
+## Catalog of This Code Repo
 
 - [**Graph Contrastive Learning with Cohesive Subgraph Awareness**](#cohesive-topology-augmentation-for-social-graph-contrastive-learning)
   - [CTAug Framework](#ctaug-framework)
