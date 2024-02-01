@@ -1,5 +1,9 @@
 # **Graph Contrastive Learning with Cohesive Subgraph Awareness**
 
+Congratulations on having our research full paper accepted to The Web Conference 2024!
+
+arXiv: http://arxiv.org/abs/2401.17580
+
 - [**Graph Contrastive Learning with Cohesive Subgraph Awareness**](#cohesive-topology-augmentation-for-social-graph-contrastive-learning)
   - [CTAug Framework](#ctaug-framework)
   - [Requirements](#requirements)
