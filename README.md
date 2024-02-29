@@ -15,6 +15,9 @@ arXiv: http://arxiv.org/abs/2401.17580
     - [get\_sub\_counts.py](#get_sub_countspy)
     - [main.py](#mainpy)
     - [Methods List](#methods-list)
+  - [Parameter Setting in Our Experiments](#parameter-setting-in-our-experiments)
+    - [get\_sub\_counts.py](#get_sub_countspy)
+    - [main.py](#mainpy)
   - [Running Examples](#running-examples)
 
 
@@ -142,6 +145,7 @@ arXiv: http://arxiv.org/abs/2401.17580
 
 NB: If some arguments are set to "**None**", they will be assigned default values which are used in our experiments automatically. The specific assignment can be seen in `main.py`.
 
+
 ### Methods List
 
 We can choose different methods by passing value to the "**method**" argument of *main.py*. For different methods, the corresponding "**method**" argument values are as follows:
@@ -164,6 +168,31 @@ We can choose different methods by passing value to the "**method**" argument of
 NB1: "**AUG**" means use module 1 (Topology Augmentation Enhancement) of *CTAug*, and "**OGSN**" means use module 2 (Graph Learning Enhancement). So if you want to only use one module of *CTAug*, just modify the "**method**" argument value. E.g. "GraphCL_AUG" for only using module 1 of *CTAug-GraphCL*, and "GraphCL_OGSN" for only using module 2 of *CTAug-GraphCL*.
 
 NB2: If using module 2, the "**feature**" arguments must be set to "**sub**" (because isomorphic subgraphs counts is necessary to *O-GSN*).
+
+## Parameter Setting in Our Experiments
+
+### get_sub_counts.py
+
+| Datasets | --id_type | --k       |
+| -------- | --------- | --------- |
+| IMDB-BINARY  | complete_graph  | 5|
+| IMDB-MULTI  | complete_graph  | 5|
+| COLLAB  | complete_graph  | 3|
+| REDDIT-BINARY  | complete_graph  | 5|
+| reddit_threads  | complete_graph  | 5|
+| ENZYMES  | cycle_graph  | 5|
+| PROTEINS | cycle_graph  | 5|
+
+### main.py
+| Datasets | $\epsilon$ (\textit{CTAug-GraphCL}) | $\epsilon$ (\textit{CTAug-JOAO}) |$\eta$ (\textit{CTAug-MVGRL})|
+| -------- | --------- | --------- | --------- |
+| IMDB-BINARY  | 0.2 | 0.2 | 0.4 |
+| IMDB-MULTI  | 0.4 | 0.2 | 0.4 |
+| COLLAB  | 0.2 | 0.2 | 0.2 |
+| REDDIT-BINARY  | 0.4 | 0.2 | / |
+| reddit_threads  | 0.2 | 0.2 | / |
+| ENZYMES  | 0.4 | 0.2 | 0.6 |
+| PROTEINS | 0.8 | 1.0 | 0.8 |
 
 ## Running Examples
 
