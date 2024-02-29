@@ -7,7 +7,7 @@ arXiv: http://arxiv.org/abs/2401.17580
 
 ## Catalog of This Code Repository
 
-- [**Graph Contrastive Learning with Cohesive Subgraph Awareness**](#cohesive-topology-augmentation-for-social-graph-contrastive-learning)
+- [**Graph Contrastive Learning with Cohesive Subgraph Awareness**](#graph-contrastive-learning-with-cohesive-subgraph-awareness)
   - [CTAug Framework](#ctaug-framework)
   - [Requirements](#requirements)
   - [File Directory](#file-directory)
@@ -16,8 +16,8 @@ arXiv: http://arxiv.org/abs/2401.17580
     - [main.py](#mainpy)
     - [Methods List](#methods-list)
   - [Parameter Setting in Our Experiments](#parameter-setting-in-our-experiments)
-    - [get\_sub\_counts.py](#get_sub_countspy)
-    - [main.py](#mainpy)
+    - [get\_sub\_counts.py](#get_sub_countspy-1)
+    - [main.py](#mainpy-1)
   - [Running Examples](#running-examples)
 
 
@@ -184,7 +184,7 @@ NB2: If using module 2, the "**feature**" arguments must be set to "**sub**" (be
 | PROTEINS | cycle_graph  | 5|
 
 ### main.py
-| Datasets | $\epsilon$ (\textit{CTAug-GraphCL}) | $\epsilon$ (\textit{CTAug-JOAO}) |$\eta$ (\textit{CTAug-MVGRL})|
+| Datasets | $\epsilon$ (CTAug-GraphCL) | $\epsilon$ (CTAug-JOAO) |$\eta$ (CTAug-MVGRL)|
 | -------- | --------- | --------- | --------- |
 | IMDB-BINARY  | 0.2 | 0.2 | 0.4 |
 | IMDB-MULTI  | 0.4 | 0.2 | 0.4 |
