@@ -17,7 +17,7 @@ arXiv: http://arxiv.org/abs/2401.17580
     - [Methods List](#methods-list)
   - [Parameter Setting in Our Experiments](#parameter-setting-in-our-experiments)
     - [get\_sub\_counts.py](#get_sub_countspy-1)
-    - [main.py](#mainpy-1)
+    - [main.py (--factor)](#mainpy---factor)
   - [Running Examples](#running-examples)
 
 
@@ -183,7 +183,7 @@ NB2: If using module 2, the "**feature**" arguments must be set to "**sub**" (be
 | ENZYMES  | cycle_graph  | 5|
 | PROTEINS | cycle_graph  | 5|
 
-### main.py
+### main.py (--factor)
 | Datasets | $\epsilon$ (CTAug-GraphCL) | $\epsilon$ (CTAug-JOAO) |$\eta$ (CTAug-MVGRL)|
 | -------- | --------- | --------- | --------- |
 | IMDB-BINARY  | 0.2 | 0.2 | 0.4 |
